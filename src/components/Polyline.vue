@@ -6,6 +6,11 @@
       :stroke="stroke"
       :stroke-width="stroke_width"
       :fill="fill_seen ? fill : 'none'" />
+      <dragger
+      v-for="(point, index) in points"
+      :key="index"
+      :x.sync="point.x"
+      :y.sync="point.y"/>
     </svg><br/>
 
     <div class="form">
@@ -28,6 +33,8 @@
 </template>
 
 <script>
+  import dragger from './Dragger.vue'
+
   export default({
     name: 'mypolyline',
     data () {
@@ -51,6 +58,9 @@
         return this.points.reduce((points_1d, point) =>
           `${points_1d} ${point.x},${point.y}`, '')
       }
+    },
+    components: {
+      dragger
     }
   })
 </script>

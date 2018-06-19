@@ -9,6 +9,9 @@
       :rx="rx"
       :ry="ry"
       :fill="fill" />
+      <dragger
+      :x.sync="cx"
+      :y.sync="cy"/>
     </svg><br/>
 
     <div class="form">
@@ -23,12 +26,14 @@
         stroke-color: <input v-model="stroke" type="color">
       </div>
 
-      <p>&lt;ellipse rx="{{rx}}" ry="{{ry}}" cx="{{cx}}" cx="{{cx}}" fill="{{fill}}" <span v-if="stroke_seen">stroke="{{stroke}}" stroke-width:"{{stroke_width}}"</span> /&gt;</p>
+      <p>&lt;ellipse cx="{{cx}}" cy="{{cy}}" rx="{{rx}}" ry="{{ry}}" fill="{{fill}}" <span v-if="stroke_seen">stroke="{{stroke}}" stroke-width:"{{stroke_width}}"</span> /&gt;</p>
     </div>
   </div>
 </template>
 
 <script>
+  import dragger from './Dragger.vue'
+
   export default({
     name: 'myellipse',
     data () {
@@ -42,6 +47,9 @@
         stroke_width: 8,
         stroke_seen: false
       }
+    },
+    components: {
+      dragger
     }
   })
 </script>

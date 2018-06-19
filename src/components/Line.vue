@@ -8,6 +8,13 @@
       :y1="y1"
       :x2="x2"
       :y2="y2" />
+
+      <dragger
+      :x.sync="x1"
+      :y.sync="y1"/>
+      <dragger
+      :x.sync="x2"
+      :y.sync="y2"/>
     </svg><br/>
 
     <div class="form">
@@ -24,6 +31,8 @@
 </template>
 
 <script>
+  import dragger from './Dragger.vue'
+
   export default({
     name: 'myline',
     data () {
@@ -37,6 +46,9 @@
         stroke: '#BBC42A',
         stroke_width: 8
       }
+    },
+    components: {
+      dragger
     }
   })
 </script>

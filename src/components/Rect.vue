@@ -11,6 +11,12 @@
       :y="y"
       :rx="rx"
       :ry="ry" />
+      <dragger
+      :x.sync="x"
+      :y="y+height/2"/>
+      <dragger
+      :x="x+width/2"
+      :y.sync="y"/>
     </svg><br/>
 
     <div class="form">
@@ -33,6 +39,8 @@
 </template>
 
 <script>
+  import dragger from './Dragger.vue'
+
   export default({
     name: 'myrect',
     data () {
@@ -48,6 +56,9 @@
         stroke_width: 8,
         stroke_seen: false
       }
+    },
+    components: {
+      dragger
     }
   })
 </script>
