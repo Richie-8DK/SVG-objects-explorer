@@ -9,7 +9,7 @@
 </template>
 <script>
   export default {
-    props: ['x', 'y'],
+    props: {x: Number, y: Number},
     data () {
       return {
         dragged: false

@@ -20,16 +20,16 @@
     </svg><br/>
 
     <div class="form">
-      width: <input v-model="width" type="range" max="300"><br/>
-      height: <input v-model="height" type="range" max="300"><br/>
-      x: <input v-model="x" type="range" max="300"><br/>
-      y: <input v-model="y" type="range" max="300"><br/>
-      rx: <input v-model="rx" type="range" max="150"><br/>
-      ry: <input v-model="ry" type="range" max="150"><br/>
+      width: <input v-model.number="width" type="range" max="300"><br/>
+      height: <input v-model.number="height" type="range" max="300"><br/>
+      x: <input v-model.number="x" type="range" max="300"><br/>
+      y: <input v-model.number="y" type="range" max="300"><br/>
+      rx: <input v-model.number="rx" type="range" max="150"><br/>
+      ry: <input v-model.number="ry" type="range" max="150"><br/>
       fill: <input v-model="fill" type="color"><br/>
       stroke: <input v-model="stroke_seen" type="checkbox"><br/>
       <div v-if="stroke_seen">
-        stroke-width: <input v-model="stroke_width" type="range" max="100"><br/>
+        stroke-width: <input v-model.number="stroke_width" type="range" max="100"><br/>
         stroke-color: <input v-model="stroke" type="color">
       </div>
 

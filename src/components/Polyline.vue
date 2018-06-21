@@ -15,12 +15,12 @@
 
     <div class="form">
       points: <div v-for="(point, index) in points" :key="index">
-        x: <input v-model="point.x" type="range" max="300">
-        y: <input v-model="point.y" type="range" max="300">
+        x: <input v-model.number="point.x" type="range" max="300">
+        y: <input v-model.number="point.y" type="range" max="300">
         <button @click="points.splice(index, 1)">delete</button><br/>
       </div>
       <button @click="points.push({ x: 0, y: 0 })">add</button><br/>
-      stroke-width: <input v-model="stroke_width" type="range" max="100"><br/>
+      stroke-width: <input v-model.number="stroke_width" type="range" max="100"><br/>
       stroke: <input v-model="stroke" type="color"><br/>
       fill: <input v-model="fill_seen" type="checkbox"><br/>
       <div v-if="fill_seen">

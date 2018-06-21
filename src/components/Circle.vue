@@ -14,13 +14,13 @@
     </svg><br/>
 
     <div class="form">
-      r: <input v-model="r" type="range" max="150"><br/>
-      cx: <input v-model="cx" type="range" max="300"><br/>
-      cy: <input v-model="cy" type="range" max="300"><br/>
+      r: <input v-model.number="r" type="range" max="150"><br/>
+      cx: <input v-model.number="cx" type="range" max="300"><br/>
+      cy: <input v-model.number="cy" type="range" max="300"><br/>
       fill: <input v-model="fill" type="color"><br/>
       stroke: <input v-model="stroke_seen" type="checkbox"><br/>
       <div v-if="stroke_seen">
-        stroke-width: <input v-model="stroke_width" type="range" max="100"><br/>
+        stroke-width: <input v-model.number="stroke_width" type="range" max="100"><br/>
         stroke-color: <input v-model="stroke" type="color">
       </div>
 
