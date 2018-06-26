@@ -27,7 +27,7 @@
         stroke-color: <input v-model="stroke" type="color">
       </div>
 
-      <p>&lt;polygon points="{{points_1d}}" fill="{{fill}}" <span v-if="stroke_seen">stroke="{{stroke}}" stroke-width:"{{stroke_width}}"</span> /&gt;</p>
+      <p>&lt;polygon points="{{points_1d}}" fill="{{fill}}" <span v-if="stroke_seen">stroke="{{stroke}}" stroke-width="{{stroke_width}}"</span> /&gt;</p>
     </div>
   </div>
 </template>

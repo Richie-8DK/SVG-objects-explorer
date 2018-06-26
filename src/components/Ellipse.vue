@@ -26,7 +26,7 @@
         stroke-color: <input v-model="stroke" type="color">
       </div>
 
-      <p>&lt;ellipse cx="{{cx}}" cy="{{cy}}" rx="{{rx}}" ry="{{ry}}" fill="{{fill}}" <span v-if="stroke_seen">stroke="{{stroke}}" stroke-width:"{{stroke_width}}"</span> /&gt;</p>
+      <p>&lt;ellipse cx="{{cx}}" cy="{{cy}}" rx="{{rx}}" ry="{{ry}}" fill="{{fill}}" <span v-if="stroke_seen">stroke="{{stroke}}" stroke-width="{{stroke_width}}"</span> /&gt;</p>
     </div>
   </div>
 </template>

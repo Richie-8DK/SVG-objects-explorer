@@ -24,7 +24,7 @@
         stroke-color: <input v-model="stroke" type="color">
       </div>
 
-      <p>&lt;circle r="{{r}}" cx="{{cx}}" cy="{{cy}}" fill="{{fill}}" <span v-if="stroke_seen">stroke="{{stroke}}" stroke-width:"{{stroke_width}}"</span> /&gt;</p>
+      <p>&lt;circle r="{{r}}" cx="{{cx}}" cy="{{cy}}" fill="{{fill}}" <span v-if="stroke_seen">stroke="{{stroke}}" stroke-width="{{stroke_width}}"</span> /&gt;</p>
     </div>
   </div>
 </template>

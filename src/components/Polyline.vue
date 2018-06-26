@@ -27,7 +27,7 @@
         fill-color: <input v-model="fill" type="color"><br/>
       </div>
 
-      <p>&lt;polyline points="{{points_1d}}" stroke="{{stroke}}" stroke-width:"{{stroke_width}}" <span v-if="fill_seen">fill="{{fill}}"</span> /&gt;</p>
+      <p>&lt;polyline points="{{points_1d}}" stroke="{{stroke}}" stroke-width="{{stroke_width}}" <span v-if="fill_seen">fill="{{fill}}"</span> /&gt;</p>
     </div>
   </div>
 </template>
